@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, Input } from '@angular/core';
 import { Article } from './article.model';
 
 @Component({
@@ -7,9 +7,9 @@ import { Article } from './article.model';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  @HostBinding('attr.class') cssClass = 'row'
-  article: Article;
-  
+  @HostBinding('attr.class') cssClass = 'row';
+  @Input() article:Article;
+
   constructor() {
     this.article = new Article ('Angular','http://angular.io',10);
   }
@@ -17,14 +17,15 @@ export class ArticleComponent implements OnInit {
   voteUp(): boolean
   {
     this.article.votes += 1;
-    return false;
+    return false;  // Empeche la page de se recharger au clic en étant un boolean
   }
 
   voteDown(): boolean
   {
     this.article.votes -= 1;
-    return false;
+    return false; // Empeche la page de se recharger au clic en étant un boolean
   }
+
 
   ngOnInit(): void {
   }
