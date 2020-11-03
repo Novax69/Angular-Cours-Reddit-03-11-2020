@@ -11,7 +11,14 @@ git clone https://github.com/Novax69/Angular-Cours-Reddit-03-11-2020.git
 ## Installer les dependances :
 
 ```bash
-npm i 
+npm i  # installe les dépendances nodes
+
+npm install fomantic-ui  # installe le CSS
+
+cd semantic/
+
+npx gulp build
+
 ```
 
 ## Récuperer tout (si rien n'est téléchargé)
