@@ -15,9 +15,11 @@ npm i  # installe les dépendances nodes
 
 npm install fomantic-ui  # installe le CSS
 
-cd semantic/
+cd semantic/  # déplacer vous dans le dossier avant de build
 
-npx gulp build
+npx gulp build # Construit le CSS a partir du dossier semantic/
+
+cd .. # Retour à la racine
 
 ```
 
