@@ -12,8 +12,8 @@ export class AppComponent {
   constructor() {
     this.articles = [
       new Article ('Angular','http://angular.io',10),
-      new Article ('React','http://reactjs.org',10),
-      new Article ('Angular homepage','http://angular.io',10)
+      new Article ('React','http://reactjs.org',2),
+      new Article ('Angular homepage','http://angular.io',20)
     ]
   }
 
@@ -27,4 +27,10 @@ export class AppComponent {
     return false;
   }
   title = 'reddit';
+
+
+  sortedArticles(): Article[] {
+    return this.articles.sort((a: Article, b: Article) => b.votes - a.votes)
+}
+
 }
